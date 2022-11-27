@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1140px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.container-1, .container-2, .container-3 {
+    padding: 3rem;
+    height: 500px;
+    width: 300px;
+}
+.container-1 {
+    background-color: var(--Bright-orange);
+}
+h1 {
+    color: var(--Very-light-gray-background-headings-buttons);
+    text-transform: uppercase;
+    margin: 1.5rem 0 1.5rem 0;
+    font-family: 'Big Shoulders Display', cursive;
+}
+p {
+    width: 222px;
+    color: var(--Transparent-white-paragraphs);
+    line-height: 1.5;
+    font-family: 'Lexend Deca', sans-serif;
+}
+button {
+    margin-top: 5rem;
+    border: 3px solid white;
+    padding: 1rem;
+    width: 160px;
+    border-radius: 2rem;
+    transition: 0.2s;
+    cursor: pointer;
+    font-size: 15px;
+}
+.container-1 button {
+    color: var(--Bright-orange);
+}
+.container-1 button:hover {
+    background-color: var(--Bright-orange);
+    color: var(--Transparent-white-paragraphs);
+}
+.container-2 button {
+    color: var(--Dark-cyan);
+}
+.container-3 button {
+    color: var(--Very-dark-cyan);
+}
+.container-2 {
+    background-color: var(--Dark-cyan);
+}
+.container-2 button:hover {
+    background-color: var(--Dark-cyan);
+    color: var(--Transparent-white-paragraphs);
+}
+.container-3 {
+    background-color: var(--Very-dark-cyan);
+}
+.container-3 button:hover {
+    background-color: var(--Very-dark-cyan);
+    color: var(--Transparent-white-paragraphs);
+}
+@media (max-width: 425px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .container-1, .container-2, .container-3 {
+        height: 423px;
+        padding: 30px 41px;
+    }
+    button {
+        width: 140px;
+        margin-top: 2rem;
+    }
+    p {
+        width: 200px;
+    }
+}
